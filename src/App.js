@@ -1,12 +1,8 @@
-import React from "react";
-
+import React, {useState} from "react";
 import colorData from "./color-data.json";
 import ColorList from "./ColorList";
 
 export default function App() {
-  return (
-    <div>
-      <ColorList />
-    </div>
-  );
+  const [colors] = useState(colorData);
+  return <ColorList colors={colors} />;
 }

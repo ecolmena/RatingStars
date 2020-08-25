@@ -5,7 +5,7 @@ import StarRating from "./StarRating";
 export default function Color() {
   return (
     <section>
-      <h1>Title</h1>
+      <h1>Color Organizer</h1>
       <div />
       <StarRating />
     </section>
