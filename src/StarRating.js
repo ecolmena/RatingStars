@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import Star from "./Star";
 const createArray = length => [...Array(length)];
 
-export default function StarRating({ totalStars=5 }) {
+export default function StarRating({ totalStars=5, onRate = f => f }) {
     const [selectedStars, setSelectedStars] = useState(0);
     
     return (
