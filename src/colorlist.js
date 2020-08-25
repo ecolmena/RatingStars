@@ -4,22 +4,28 @@
  * @Author: shaomin fei
  * @Date: 2020-08-24 19:27:26
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-24 19:36:23
+ * @LastEditTime: 2020-08-24 22:05:12
  */
 import React from "react"
 
 import Color from "./Color";
 
-const ColorList=function({colors=[]}){
+const ColorList=function({colors=[],
+    onRemoveColor=f=>f,
+    onRateColor=f=>f
+}){
 
     if(!colors.length){
         return (<div>No Color Listed</div>);
     }
     return (
-        <div>
+        <div className="color-list">
             {
                 colors.map(color=>{
-                   return (<Color key={colors.id} {...color}></Color>)
+                   return (<Color key={colors.id} {...color} 
+                    onRemove={onRemoveColor}
+                    onRate={onRateColor}
+                    ></Color>)
                 })
             }
         </div>
